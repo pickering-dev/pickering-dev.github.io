@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  color: #ced4da;
+}
+
+main {
+  display: none;
+}
+
+body {
+  background-color: #0f0f0f;
+}
+
+#loading-screen {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  transition: 0.5s ease-in-out all;
+}
+
+#loading-screen:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis steps(4, end) 900ms infinite;
+  content: "…"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25rem;
+  }
+}
+header {
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #0f0f0f;
+}
+header .progress-bar {
+  height: 5px;
+  width: 100%;
+  margin-top: 15px;
+}
+header .progress-bar .bar-progress {
+  background-color: #ced4da;
+  height: 2px;
+  transition: all 0.2s ease-in;
+  width: 0;
+  max-width: 95%;
+  opacity: 0.5;
+}
+header #tech-stack {
+  display: none;
+}
+header #tech-stack ul {
+  margin-top: 0;
+  border-left: 2px solid;
+  padding-left: 10px;
+}
+header h1,
+header h2 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  margin-top: 10px;
+}
+header ul li {
+  margin-right: 5px;
+  padding-right: 5px;
+}
+header a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header .tech-stack {
+  text-transform: uppercase;
+}
+header .tech-stack:hover {
+  cursor: pointer;
+}
+
+section {
+  height: 50vh;
+  padding-top: 135px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+section h1,
+section h2 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+}
+section h2 {
+  font-size: 3em;
+  border-bottom: 5px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section.intro .writing {
+  margin-top: 30px;
+}
+section.intro .writing p {
+  line-height: 2;
+}
+section.intro ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+section.intro ul li {
+  margin-right: 15px;
+}
+section.recent-work {
+  height: 100vh;
+}
+section.recent-work .active {
+  border-bottom: 2px solid;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section.recent-work .slider {
+  display: flex;
+}
+section.recent-work .work {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 50%;
+  margin-top: 30px;
+  overflow-x: visible;
+  padding: 15px;
+}
+section.recent-work .work h3 {
+  margin: 15px;
+  text-transform: uppercase;
+}
+section.recent-work .work h3:hover {
+  cursor: pointer;
+}
+section.recent-work img {
+  margin-top: 50px;
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+}
+section#downloads .downloads {
+  margin-top: 30px;
+}/*# sourceMappingURL=style.css.map */

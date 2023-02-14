@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Noto Sans", sans-serif;
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+	color: #ced4da;
+}
+
+main {
+	display: none;
+}
+body {
+	background-color: #0f0f0f;
+}
+
+#loading-screen {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	font-family: "Inter", sans-serif;
+	font-size: 1rem;
+	transition: 0.5s ease-in-out all;
+}
+
+#loading-screen:after {
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: bottom;
+	-webkit-animation: ellipsis steps(4, end) 900ms infinite;
+	animation: ellipsis steps(4, end) 900ms infinite;
+	content: "\2026"; /* ascii code for the ellipsis character */
+	width: 0px;
+}
+
+@keyframes ellipsis {
+	to {
+		width: 1.25rem;
+	}
+}
+
+@-webkit-keyframes ellipsis {
+	to {
+		width: 1.25rem;
+	}
+}
+
+header {
+	padding: 15px 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: white;
+	padding-left: clamp(30px, 15px, 75px);
+	padding-right: clamp(30px, 15px, 75px);
+	background-color: #0f0f0f;
+	.progress-bar {
+		height: 5px;
+		width: 100%;
+		margin-top: 15px;
+		.bar-progress {
+			background-color: #ced4da;
+			height: 2px;
+			transition: all 0.2s ease-in;
+			width: 0;
+			max-width: 95%;
+			opacity: 0.5;
+		}
+	}
+	#tech-stack {
+		display: none;
+
+		ul {
+			margin-top: 0;
+			border-left: 2px solid;
+			padding-left: 10px;
+		}
+	}
+	h1,
+	h2 {
+		font-family: "Ubuntu", sans-serif;
+		text-transform: uppercase;
+	}
+	ul {
+		display: flex;
+		list-style: none;
+		margin-top: 10px;
+		li {
+			margin-right: 5px;
+			padding-right: 5px;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.tech-stack {
+		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+section {
+	height: 50vh;
+	padding-top: 135px;
+	padding-left: clamp(30px, 15px, 75px);
+	padding-right: clamp(30px, 15px, 75px);
+	h1,
+	h2 {
+		font-family: "Ubuntu", sans-serif;
+		text-transform: uppercase;
+	}
+	h2 {
+		font-size: 3em;
+		border-bottom: 5px solid;
+		width: fit-content;
+	}
+	&.intro {
+		.writing {
+			margin-top: 30px;
+			p {
+				line-height: 2;
+			}
+		}
+		ul {
+			display: flex;
+			justify-content: space-around;
+			list-style: none;
+			li {
+				margin-right: 15px;
+			}
+		}
+	}
+
+	&.recent-work {
+		height: 100vh;
+
+		.active {
+			border-bottom: 2px solid;
+			width: fit-content;
+		}
+		.slider {
+			display: flex;
+		}
+		.work {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			height: 100%;
+			width: 50%;
+			margin-top: 30px;
+			overflow-x: visible;
+			padding: 15px;
+			h3 {
+				margin: 15px;
+				text-transform: uppercase;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		img {
+			margin-top: 50px;
+			width: 100%;
+			display: none;
+			border-radius: 10px;
+		}
+	}
+
+	&#downloads {
+		.downloads {
+			margin-top: 30px;
+		}
+	}
+}
