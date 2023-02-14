@@ -112,7 +112,6 @@ section h2 {
 }
 section h2 {
   font-size: 3em;
-  border-bottom: 5px solid;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -133,6 +132,9 @@ section.intro ul li {
 section.recent-work {
   height: 100vh;
 }
+section.recent-work .images {
+  width: 50%;
+}
 section.recent-work .active {
   border-bottom: 2px solid;
   width: -moz-fit-content;
@@ -140,6 +142,8 @@ section.recent-work .active {
 }
 section.recent-work .slider {
   display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 section.recent-work .work {
   display: flex;
@@ -149,10 +153,10 @@ section.recent-work .work {
   width: 50%;
   margin-top: 30px;
   overflow-x: visible;
-  padding: 15px;
+  padding: 15px 15px 15px 0;
 }
 section.recent-work .work h3 {
-  margin: 15px;
+  margin: 15px 15px 15px 0;
   text-transform: uppercase;
 }
 section.recent-work .work h3:hover {

@@ -121,7 +121,6 @@ section {
 	}
 	h2 {
 		font-size: 3em;
-		border-bottom: 5px solid;
 		width: fit-content;
 	}
 	&.intro {
@@ -143,13 +142,17 @@ section {
 
 	&.recent-work {
 		height: 100vh;
-
+		.images {
+			width: 50%;
+		}
 		.active {
 			border-bottom: 2px solid;
 			width: fit-content;
 		}
 		.slider {
 			display: flex;
+			flex-direction: row-reverse;
+			align-items: center;
 		}
 		.work {
 			display: flex;
@@ -159,9 +162,9 @@ section {
 			width: 50%;
 			margin-top: 30px;
 			overflow-x: visible;
-			padding: 15px;
+			padding: 15px 15px 15px 0;
 			h3 {
-				margin: 15px;
+				margin: 15px 15px 15px 0;
 				text-transform: uppercase;
 				&:hover {
 					cursor: pointer;
