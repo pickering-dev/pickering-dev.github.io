@@ -119,7 +119,13 @@ section h2 {
 }
 section.intro {
   background-color: #1e3c37;
-  padding-top: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 65px;
+  height: 100vh;
 }
 section.intro .writing {
   margin-top: 30px;
