@@ -7,6 +7,7 @@
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 	color: #ced4da;
+	transition: 0.2s color ease-in-out;
 }
 
 main {
@@ -56,8 +57,8 @@ header {
 	top: 0;
 	width: 100%;
 	background: white;
-	padding-left: clamp(30px, 15px, 75px);
-	padding-right: clamp(30px, 15px, 75px);
+	padding-left: clamp(30px, 100px, 75px);
+	padding-right: clamp(30px, 100px, 75px);
 	background-color: #0f0f0f;
 	.progress-bar {
 		height: 5px;
@@ -68,7 +69,7 @@ header {
 			height: 2px;
 			transition: all 0.2s ease-in;
 			width: 0;
-			max-width: 95%;
+			max-width: 90%;
 			opacity: 0.5;
 		}
 	}
@@ -85,6 +86,7 @@ header {
 	h2 {
 		font-family: "Ubuntu", sans-serif;
 		text-transform: uppercase;
+		color: #3a776d;
 	}
 	ul {
 		display: flex;
@@ -112,8 +114,8 @@ header {
 section {
 	height: 50vh;
 	padding-top: 135px;
-	padding-left: clamp(30px, 15px, 75px);
-	padding-right: clamp(30px, 15px, 75px);
+	padding-left: clamp(30px, 100px, 75px);
+	padding-right: clamp(30px, 100px, 75px);
 	h1,
 	h2 {
 		font-family: "Ubuntu", sans-serif;
@@ -124,6 +126,8 @@ section {
 		width: fit-content;
 	}
 	&.intro {
+		background-color: #1e3c37;
+		padding-top: 360px;
 		.writing {
 			margin-top: 30px;
 			p {
@@ -142,12 +146,18 @@ section {
 
 	&.recent-work {
 		height: 100vh;
+
+		> p {
+			margin: 15px 0;
+		}
+
 		.images {
 			width: 50%;
 		}
 		.active {
 			border-bottom: 2px solid;
 			width: fit-content;
+			color: #3a776d;
 		}
 		.slider {
 			display: flex;
@@ -176,12 +186,25 @@ section {
 			width: 100%;
 			display: none;
 			border-radius: 10px;
+			height: 500px;
+			object-fit: cover;
 		}
 	}
 
 	&#downloads {
+		background-color: #1e3c37;
 		.downloads {
 			margin-top: 30px;
+			margin-right: 30px;
+		}
+		.download-flex {
+			display: flex;
+			align-items: flex-end;
+		}
+		.links {
+			> h3 {
+				margin-right: 30px;
+			}
 		}
 	}
 }

@@ -7,6 +7,7 @@
   scroll-behavior: smooth;
   overflow-x: hidden;
   color: #ced4da;
+  transition: 0.2s color ease-in-out;
 }
 
 main {
@@ -49,8 +50,8 @@ header {
   top: 0;
   width: 100%;
   background: white;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 75px;
+  padding-right: 75px;
   background-color: #0f0f0f;
 }
 header .progress-bar {
@@ -63,7 +64,7 @@ header .progress-bar .bar-progress {
   height: 2px;
   transition: all 0.2s ease-in;
   width: 0;
-  max-width: 95%;
+  max-width: 90%;
   opacity: 0.5;
 }
 header #tech-stack {
@@ -78,6 +79,7 @@ header h1,
 header h2 {
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
+  color: #3a776d;
 }
 header ul {
   display: flex;
@@ -102,8 +104,8 @@ header .tech-stack:hover {
 section {
   height: 50vh;
   padding-top: 135px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 75px;
+  padding-right: 75px;
 }
 section h1,
 section h2 {
@@ -114,6 +116,10 @@ section h2 {
   font-size: 3em;
   width: -moz-fit-content;
   width: fit-content;
+}
+section.intro {
+  background-color: #1e3c37;
+  padding-top: 360px;
 }
 section.intro .writing {
   margin-top: 30px;
@@ -132,6 +138,9 @@ section.intro ul li {
 section.recent-work {
   height: 100vh;
 }
+section.recent-work > p {
+  margin: 15px 0;
+}
 section.recent-work .images {
   width: 50%;
 }
@@ -139,6 +148,7 @@ section.recent-work .active {
   border-bottom: 2px solid;
   width: -moz-fit-content;
   width: fit-content;
+  color: #3a776d;
 }
 section.recent-work .slider {
   display: flex;
@@ -167,7 +177,21 @@ section.recent-work img {
   width: 100%;
   display: none;
   border-radius: 10px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section#downloads {
+  background-color: #1e3c37;
 }
 section#downloads .downloads {
   margin-top: 30px;
+  margin-right: 30px;
+}
+section#downloads .download-flex {
+  display: flex;
+  align-items: flex-end;
+}
+section#downloads .links > h3 {
+  margin-right: 30px;
 }/*# sourceMappingURL=style.css.map */
