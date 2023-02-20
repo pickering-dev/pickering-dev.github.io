@@ -102,8 +102,18 @@ header a {
   text-decoration: none;
   text-transform: uppercase;
 }
+@media screen and (max-width: 992px) {
+  header a {
+    font-size: 14px;
+  }
+}
 header .tech-stack {
   text-transform: uppercase;
+}
+@media screen and (max-width: 992px) {
+  header .tech-stack {
+    display: none;
+  }
 }
 header .tech-stack:hover {
   cursor: pointer;
@@ -150,6 +160,11 @@ section.intro ul li {
 }
 section.recent-work {
   height: 100vh;
+}
+@media screen and (max-width: 992px) {
+  section.recent-work {
+    height: 100%;
+  }
 }
 section.recent-work > p {
   margin: 15px 0;

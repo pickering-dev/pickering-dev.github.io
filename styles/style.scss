@@ -110,10 +110,16 @@ header {
 	a {
 		text-decoration: none;
 		text-transform: uppercase;
+		@media screen and (max-width: 992px) {
+			font-size: 14px;
+		}
 	}
 
 	.tech-stack {
 		text-transform: uppercase;
+		@media screen and (max-width: 992px) {
+			display: none;
+		}
 		&:hover {
 			cursor: pointer;
 		}
@@ -161,7 +167,9 @@ section {
 
 	&.recent-work {
 		height: 100vh;
-
+		@media screen and (max-width: 992px) {
+			height: 100%;
+		}
 		> p {
 			margin: 15px 0;
 		}
