@@ -48,8 +48,9 @@ a {
   }
 }
 header {
-  padding: 15px 0;
+  padding: 5px 0 15px 0;
   position: fixed;
+  z-index: 999;
   top: 0;
   width: 100%;
   background: white;
@@ -59,7 +60,6 @@ header {
 header .progress-bar {
   height: 5px;
   width: 100%;
-  margin-top: 15px;
 }
 header .progress-bar .bar-progress {
   background-color: #ced4da;
@@ -92,6 +92,7 @@ header ul {
   list-style: none;
   margin-top: 10px;
   padding-left: 0;
+  margin-bottom: 2px;
 }
 header ul li {
   margin-right: 5px;
@@ -208,4 +209,18 @@ section#downloads .download-flex {
 }
 section#downloads .links > h3 {
   margin-right: 30px;
+}
+
+.hidden {
+  opacity: 0;
+  top: -10px;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.show {
+  opacity: 1;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */

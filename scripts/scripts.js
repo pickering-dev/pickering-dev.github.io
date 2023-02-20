@@ -85,14 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	var headerText = document.getElementById("header-text");
+	var headerShadow = document.getElementById("head");
 
 	window.onscroll = function () {
 		if (window.pageYOffset > 0 && headerText.style.height !== "0px") {
 			headerText.style.opacity = 0;
 			headerText.style.height = "0px";
+
+			headerShadow.style.boxShadow = "#8080802b -1px 7px 10px";
 		} else if (window.pageYOffset === 0 && headerText.style.height === "0px") {
 			headerText.style.opacity = 1;
 			headerText.style.height = "40px";
+			headerShadow.style.boxShadow = "none";
 		}
 	};
 
@@ -120,4 +124,19 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	setInterval(changeLanguage, 2000); // Call changeLanguage every 5 seconds
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			console.log(entry);
+			if (entry.isIntersecting) {
+				entry.target.classList.add("show");
+			} else {
+				entry.target.classList.remove("show");
+			}
+		});
+	});
+
+	const hiddenElement = document.querySelectorAll(".hidden");
+
+	hiddenElement.forEach((el) => observer.observe(el));
 });
