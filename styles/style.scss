@@ -143,6 +143,9 @@ section {
 		font-size: 3em;
 		width: 100%;
 		font-weight: 900;
+		@media screen and (max-width: 992px) {
+			font-size: 2em !important;
+		}
 	}
 	&.intro {
 		display: flex;
@@ -220,6 +223,9 @@ section {
 			height: 500px;
 			object-fit: cover;
 			box-shadow: 6px 9px 10px 3px #ececec;
+			@media screen and (max-width: 992px) {
+				height: 100% !important;
+			}
 		}
 	}
 
@@ -239,6 +245,10 @@ section {
 		.links {
 			> h3 {
 				margin-right: 30px;
+			}
+			h3 {
+				font-size: 1rem;
+				margin-bottom: 3rem;
 			}
 		}
 	}
