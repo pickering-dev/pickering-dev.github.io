@@ -112,7 +112,7 @@ header .tech-stack {
 }
 @media screen and (max-width: 992px) {
   header .tech-stack {
-    display: none;
+    display: none !important;
   }
 }
 header .tech-stack:hover {
@@ -148,6 +148,11 @@ section.intro {
   text-align: center;
   padding-top: 65px;
   height: 100vh;
+}
+@media screen and (max-width: 992px) {
+  section.intro {
+    margin-top: 140px;
+  }
 }
 section.intro .writing {
   margin-top: 30px;
