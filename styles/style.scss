@@ -17,8 +17,8 @@ html {
 }
 
 a {
-	text-decoration: none;
-	--bs-link-color: black;
+	text-decoration: none !important;
+	--bs-link-color: black !important;
 }
 
 #loading-screen {
