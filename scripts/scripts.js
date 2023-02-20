@@ -95,4 +95,29 @@ document.addEventListener("DOMContentLoaded", function () {
 			headerText.style.height = "40px";
 		}
 	};
+
+	const languages = {
+		en: "Welcome!",
+		es: "¡Bienvenidos!",
+		fr: "Bienvenue!",
+		ja: "ようこそ！",
+		// Add more languages as needed
+	};
+
+	let currentLanguage = "en"; // Start with English
+
+	function changeLanguage() {
+		const greeting = document.querySelector("h2");
+		greeting.textContent = `${languages[currentLanguage]} 🙂`;
+		currentLanguage = getNextLanguage(currentLanguage);
+	}
+
+	function getNextLanguage(language) {
+		const languageKeys = Object.keys(languages);
+		const currentIndex = languageKeys.indexOf(language);
+		const nextIndex = (currentIndex + 1) % languageKeys.length;
+		return languageKeys[nextIndex];
+	}
+
+	setInterval(changeLanguage, 2000); // Call changeLanguage every 5 seconds
 });

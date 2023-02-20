@@ -84,6 +84,8 @@ header h2 {
   height: 40px;
   opacity: 1;
   transition: all 0.5s ease-in-out 0s;
+  z-index: -1;
+  position: relative;
 }
 header ul {
   display: flex;
@@ -190,6 +192,7 @@ section.recent-work img {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
+  box-shadow: 6px 9px 10px 3px #ececec;
 }
 section#downloads .downloads {
   margin-top: 30px;
