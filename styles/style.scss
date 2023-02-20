@@ -118,7 +118,7 @@ header {
 	.tech-stack {
 		text-transform: uppercase;
 		@media screen and (max-width: 992px) {
-			display: none;
+			display: none !important;
 		}
 		&:hover {
 			cursor: pointer;
