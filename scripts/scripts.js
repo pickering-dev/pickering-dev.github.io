@@ -83,4 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
 			activeImage = image;
 		});
 	});
+
+	var headerText = document.getElementById("header-text");
+
+	window.onscroll = function () {
+		if (window.pageYOffset > 0 && headerText.style.height !== "0px") {
+			headerText.style.opacity = 0;
+			headerText.style.height = "0px";
+		} else if (window.pageYOffset === 0 && headerText.style.height === "0px") {
+			headerText.style.opacity = 1;
+			headerText.style.height = "40px";
+		}
+	};
 });

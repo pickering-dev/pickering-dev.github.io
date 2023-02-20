@@ -5,17 +5,20 @@
   padding: 0;
   font-family: "Noto Sans", sans-serif;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  color: #ced4da;
-  transition: 0.2s color ease-in-out;
+  color: black;
 }
 
 main {
   display: none;
 }
 
-body {
-  background-color: #0f0f0f;
+html {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  --bs-link-color: black;
 }
 
 #loading-screen {
@@ -50,9 +53,8 @@ header {
   top: 0;
   width: 100%;
   background: white;
-  padding-left: 75px;
-  padding-right: 75px;
-  background-color: #0f0f0f;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 header .progress-bar {
   height: 5px;
@@ -64,7 +66,6 @@ header .progress-bar .bar-progress {
   height: 2px;
   transition: all 0.2s ease-in;
   width: 0;
-  max-width: 90%;
   opacity: 0.5;
 }
 header #tech-stack {
@@ -79,12 +80,16 @@ header h1,
 header h2 {
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
-  color: #3a776d;
+  font-weight: 900;
+  height: 40px;
+  opacity: 1;
+  transition: all 0.5s ease-in-out 0s;
 }
 header ul {
   display: flex;
   list-style: none;
   margin-top: 10px;
+  padding-left: 0;
 }
 header ul li {
   margin-right: 5px;
@@ -104,8 +109,8 @@ header .tech-stack:hover {
 section {
   height: 50vh;
   padding-top: 135px;
-  padding-left: 75px;
-  padding-right: 75px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 section h1,
 section h2 {
@@ -114,11 +119,10 @@ section h2 {
 }
 section h2 {
   font-size: 3em;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
+  font-weight: 900;
 }
 section.intro {
-  background-color: #1e3c37;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,8 +151,9 @@ section.recent-work {
 section.recent-work > p {
   margin: 15px 0;
 }
-section.recent-work .images {
-  width: 50%;
+section.recent-work p {
+  border-bottom: 1px solid #ced4da;
+  padding-bottom: 20px;
 }
 section.recent-work .active {
   border-bottom: 2px solid;
@@ -158,7 +163,7 @@ section.recent-work .active {
 }
 section.recent-work .slider {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column-reverse;
   align-items: center;
 }
 section.recent-work .work {
@@ -166,14 +171,13 @@ section.recent-work .work {
   flex-direction: row;
   flex-wrap: wrap;
   height: 100%;
-  width: 50%;
   margin-top: 30px;
   overflow-x: visible;
-  padding: 15px 15px 15px 0;
 }
 section.recent-work .work h3 {
-  margin: 15px 15px 15px 0;
+  margin: 10px 10px 10px 0;
   text-transform: uppercase;
+  font-size: 1rem;
 }
 section.recent-work .work h3:hover {
   cursor: pointer;
@@ -186,9 +190,6 @@ section.recent-work img {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-section#downloads {
-  background-color: #1e3c37;
 }
 section#downloads .downloads {
   margin-top: 30px;
