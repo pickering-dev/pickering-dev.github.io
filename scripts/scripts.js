@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Show the loading screen
 	loadingScreen.style.display = "flex";
 	loadingScreen.style.opacity = 1;
-	loadingScreen.style.visibility = "visible";
+	loadingScreen.style.display = "flex";
 
 	// Disable scrolling
 	document.body.style.overflow = "hidden";
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	setTimeout(function () {
 		// Step 4: Hide the loading screen
 		loadingScreen.style.opacity = 0;
-		loadingScreen.style.visibility = "hidden";
+		loadingScreen.style.display = "none";
 
 		// Re-enable scrolling
 		document.body.style.overflow = "auto";
