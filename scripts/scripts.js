@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				const activeHeading = document.querySelector("h3.active");
 				if (activeHeading) {
 					activeHeading.classList.remove("active");
-				}
+				} 
 			}
 
 			image.style.display = "block";
