@@ -125,6 +125,11 @@ section {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (max-width: 992px) {
+  section {
+    height: 100% !important;
+  }
+}
 section h1,
 section h2 {
   font-family: "Ubuntu", sans-serif;
