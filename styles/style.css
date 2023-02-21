@@ -242,12 +242,12 @@ section#downloads .download-flex {
   display: flex;
   align-items: flex-end;
 }
-section#downloads .links > h3 {
-  margin-right: 30px;
-}
-section#downloads .links h3 {
+section#downloads .download-flex h3 {
   font-size: 1rem;
   margin-bottom: 3rem;
+}
+section#downloads .links > h3 {
+  margin-right: 30px;
 }
 
 .hidden {

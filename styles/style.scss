@@ -241,14 +241,14 @@ section {
 		.download-flex {
 			display: flex;
 			align-items: flex-end;
+			h3 {
+				font-size: 1rem;
+				margin-bottom: 3rem;
+			}
 		}
 		.links {
 			> h3 {
 				margin-right: 30px;
-			}
-			h3 {
-				font-size: 1rem;
-				margin-bottom: 3rem;
 			}
 		}
 	}
