@@ -56,6 +56,7 @@ a {
   height: 100vh;
   background: white;
   width: 100%;
+  visibility: hidden;
 }
 .hamburger nav ul {
   flex-direction: column;
@@ -80,6 +81,7 @@ a {
 
 .hamburger.is-active nav {
   opacity: 1 !important;
+  visibility: visible !important;
   position: absolute;
   left: 0;
   height: 100vh;
