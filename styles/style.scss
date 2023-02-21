@@ -57,10 +57,47 @@ a {
 
 .hamburger {
 	padding: 10px 0 0 0 !important;
+	nav {
+		position: absolute;
+		left: 0;
+		height: 100vh;
+		background: white;
+		width: 100%;
+		ul {
+			flex-direction: column;
+			li {
+				a {
+					font-weight: 400;
+					font-size: 2em;
+				}
+			}
+		}
+	}
 }
 @media screen and (min-width: 700px) {
 	.hamburger {
 		display: none !important;
+	}
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+	border-radius: 0 !important;
+	height: 0.2em !important;
+	width: 30px !important;
+}
+
+.hamburger {
+	&.is-active {
+		nav {
+			opacity: 1 !important;
+			position: absolute;
+			left: 0;
+			height: 100vh;
+			background: white;
+			width: 100%;
+		}
 	}
 }
 
@@ -124,9 +161,12 @@ header {
 		margin-top: 10px;
 		padding-left: 0;
 		margin-bottom: 2px;
-		@media screen and (max-width: 992px) {
-			display: none;
+		&.desktop {
+			@media screen and (max-width: 992px) {
+				display: none;
+			}
 		}
+
 		li {
 			margin-right: 5px;
 			padding-right: 5px;

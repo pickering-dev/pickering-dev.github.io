@@ -50,12 +50,43 @@ a {
 .hamburger {
   padding: 10px 0 0 0 !important;
 }
+.hamburger nav {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  background: white;
+  width: 100%;
+}
+.hamburger nav ul {
+  flex-direction: column;
+}
+.hamburger nav ul li a {
+  font-weight: 400;
+  font-size: 2em;
+}
 
 @media screen and (min-width: 700px) {
   .hamburger {
     display: none !important;
   }
 }
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  border-radius: 0 !important;
+  height: 0.2em !important;
+  width: 30px !important;
+}
+
+.hamburger.is-active nav {
+  opacity: 1 !important;
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  background: white;
+  width: 100%;
+}
+
 header {
   padding: 5px 0 15px 0;
   position: fixed;
@@ -123,7 +154,7 @@ header ul {
   margin-bottom: 2px;
 }
 @media screen and (max-width: 992px) {
-  header ul {
+  header ul.desktop {
     display: none;
   }
 }
