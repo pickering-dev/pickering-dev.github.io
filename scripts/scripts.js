@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 				const activeHeading = document.querySelector("h3.active");
 				if (activeHeading) {
 					activeHeading.classList.remove("active");
-				} 
+				}
 			}
 
 			image.style.display = "block";
@@ -86,17 +86,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	var headerText = document.getElementById("header-text");
 	var headerShadow = document.getElementById("head");
+	var burger = document.getElementById("hamburger");
 
 	window.onscroll = function () {
 		if (window.pageYOffset > 0 && headerText.style.height !== "0px") {
 			headerText.style.opacity = 0;
 			headerText.style.height = "0px";
-
+			burger.style.height = "0px";
+			burger.style.opacity = "1";
 			headerShadow.style.boxShadow = "#8080802b -1px 7px 10px";
 		} else if (window.pageYOffset === 0 && headerText.style.height === "0px") {
 			headerText.style.opacity = 1;
 			headerText.style.height = "40px";
+			burger.style.height = "40px";
 			headerShadow.style.boxShadow = "none";
+			burger.style.opacity = "0";
 		}
 	};
 
@@ -139,4 +143,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	const hiddenElement = document.querySelectorAll(".hidden");
 
 	hiddenElement.forEach((el) => observer.observe(el));
+
+	// Look for .hamburger
+	var hamburger = document.querySelector(".hamburger");
+	// On click
+	hamburger.addEventListener("click", function () {
+		// Toggle class "is-active"
+		hamburger.classList.toggle("is-active");
+		// Do something else, like open/close menu
+	});
 });

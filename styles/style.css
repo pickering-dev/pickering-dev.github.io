@@ -47,6 +47,15 @@ a {
     width: 1.25rem;
   }
 }
+.hamburger {
+  padding: 10px 0 0 0 !important;
+}
+
+@media screen and (min-width: 700px) {
+  .hamburger {
+    display: none !important;
+  }
+}
 header {
   padding: 5px 0 15px 0;
   position: fixed;
@@ -56,6 +65,18 @@ header {
   background: white;
   padding-left: 15px;
   padding-right: 15px;
+}
+@media screen and (max-width: 700px) {
+  header {
+    height: 55px;
+  }
+}
+@media screen and (max-width: 700px) {
+  header .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 header .progress-bar {
   height: 5px;
@@ -87,12 +108,24 @@ header h2 {
   z-index: -1;
   position: relative;
 }
+@media screen and (max-width: 700px) {
+  header h1,
+  header h2 {
+    margin-bottom: 0 !important;
+    padding-top: 5px;
+  }
+}
 header ul {
   display: flex;
   list-style: none;
   margin-top: 10px;
   padding-left: 0;
   margin-bottom: 2px;
+}
+@media screen and (max-width: 992px) {
+  header ul {
+    display: none;
+  }
 }
 header ul li {
   margin-right: 5px;
@@ -142,7 +175,7 @@ section h2 {
 }
 @media screen and (max-width: 992px) {
   section h2 {
-    font-size: 2em !important;
+    font-size: 1.7em !important;
   }
 }
 section.intro {
@@ -214,6 +247,10 @@ section.recent-work .work h3 {
 }
 section.recent-work .work h3:hover {
   cursor: pointer;
+}
+section.recent-work .site-details h3 {
+  text-transform: uppercase;
+  font-weight: 700;
 }
 section.recent-work img {
   margin-top: 50px;

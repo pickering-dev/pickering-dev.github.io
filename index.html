@@ -3,6 +3,7 @@
 	
 	<head>
         <link rel="stylesheet" type="text/css" href="/styles/style.css" />
+        <link href="/node_modules/hamburgers/dist/hamburgers.min.css" rel="stylesheet">
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +16,13 @@
                     <div class="container">
                     <div class="title">
                         <h1 id="header-text">Joe Pickering</h1>
+                        <button class="hamburger hamburger--spring" type="button" id="hamburger" style="opacity: 0;">
+                            <span class="hamburger-box">
+                              <span class="hamburger-inner"></span>
+                            </span>
+                          </button>
                     </div>
+                    
                     <nav>
                         <ul>
                             <li><a href="#intro">Intro</a></li>
@@ -38,6 +45,7 @@
                                 </ul>
                             </div>
                         </ul>
+                     
                     </nav>
                     <!-- <div class="progress-bar">
                         <div class="bar-progress"></div>
@@ -65,7 +73,7 @@
                     <div class="slider">
                         <div class="images">
                             <div class="image-area">
-                                <img src="/content/arvia.png" id="arvia">
+                                <img src="/content/arvia.png" id="arvia">   
                             </div>
                             <div class="image-area">
                                 <img src="/content/alanturing.png" id="alanTuring">
