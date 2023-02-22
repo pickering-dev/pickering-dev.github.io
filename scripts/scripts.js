@@ -132,3 +132,18 @@ document.addEventListener("DOMContentLoaded", function () {
 		// Do something else, like open/close menu
 	});
 });
+function hoverTiles() {
+	var tiles = document.querySelectorAll(".button");
+	tiles.forEach(function (tile) {
+		tile.addEventListener("mouseover", function () {
+			tiles.forEach(function (tile) {
+				tile.classList.remove("active");
+			});
+			this.classList.add("active");
+		});
+	});
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+	hoverTiles();
+});
