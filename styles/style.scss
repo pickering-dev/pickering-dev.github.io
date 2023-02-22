@@ -369,7 +369,7 @@ section {
 
 .buttons {
 	margin-top: 50px;
-	position: absolute;
+	display: flex;
 	h5 {
 		opacity: 0;
 		transition: all ease-in-out;

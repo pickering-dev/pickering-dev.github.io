@@ -18,7 +18,8 @@
   "homepage": "https://github.com/pickering-dev/portfolio#readme",
   "dependencies": {
     "bootstrap": "^5.2.3",
-    "hamburgers": "^1.2.1"
+    "hamburgers": "^1.2.1",
+    "swiper": "^9.0.5"
   },
   "devDependencies": {
     "cypress": "^12.6.0"
