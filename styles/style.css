@@ -346,6 +346,11 @@ section.tech-stack p {
   margin-top: 50px;
   display: flex;
 }
+@media screen and (max-width: 992px) {
+  .buttons {
+    flex-direction: column;
+  }
+}
 .buttons h5 {
   opacity: 0;
   transition: all ease-in-out;

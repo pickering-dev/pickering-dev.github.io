@@ -25,17 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.getElementById("mainContent").style.display = "block";
 	}, 3000);
 
-	const techStack = document.querySelector(".tech-stack");
-	const techStackDetails = document.querySelector("#tech-stack");
-
-	techStack.addEventListener("mouseover", function () {
-		techStackDetails.style.display = "block";
-	});
-
-	techStack.addEventListener("mouseout", function () {
-		techStackDetails.style.display = "none";
-	});
-
 	const workItems = document.querySelectorAll(".work-item");
 	let activeImage = null;
 
